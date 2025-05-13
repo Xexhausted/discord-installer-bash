@@ -12,8 +12,8 @@ This is a simple Bash script to install or update Discord on any Linux system.
 
 ## Copy_paste use
 ```bash
-
-
+git clone https://github.com/Xexhausted/discord-installer-bash.git && cd discord-installer-bash && chmod +x discord_install.sh | ./discord_install.sh
+```
 
 ## How to Use
 
