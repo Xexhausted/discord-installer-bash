@@ -10,6 +10,11 @@ This is a simple Bash script to install or update Discord on any Linux system.
 - Installs Discord to `/opt/Discord` and creates a shortcut to run it easily.
 - Works on all Linux distributions that support basic tools like `wget`, `tar`, and `sudo`.
 
+## Copy_paste use
+```bash
+
+
+
 ## How to Use
 
 1. Clone the repository:
