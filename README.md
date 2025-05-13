@@ -1,6 +1,4 @@
-Sure! Here's the `README.md` content, ready for you to copy and paste:
 
-````
 # Discord Installer for Linux
 
 This is a simple Bash script to install or update Discord on any Linux system.
@@ -18,7 +16,7 @@ This is a simple Bash script to install or update Discord on any Linux system.
    ```bash
    git clone https://github.com/yourusername/discord-installer-bash.git
    cd discord-installer-bash
-````
+
 
 2. Make the script executable:
 
@@ -33,6 +31,7 @@ This is a simple Bash script to install or update Discord on any Linux system.
    ```
 
 4. Once the script completes, you can run Discord by typing `discord` in your terminal.
+
 
 ## Needed Tools:
 
