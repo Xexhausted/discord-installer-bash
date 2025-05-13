@@ -1,24 +1,18 @@
 #!/bin/bash
 
 uninstall_discord() {
-    read -p "This will uninstall Discord. Proceed? (y/n): " confirm
-    if [[ "$confirm" =~ ^[Yy]$ ]]; then
-        if grep -qi "arch" /etc/os-release; then
-            echo "Detected Arch-based system."
-            sudo pacman -Rns --noconfirm discord 2>/dev/null || true
-            sudo rm -rf /opt/Discord
-        elif grep -qiE "debian|ubuntu" /etc/os-release; then
-            echo "Detected Debian-based system."
-            sudo apt remove --purge -y discord 2>/dev/null || true
-            sudo rm -rf /opt/Discord
-        else
-            echo "Unsupported system. Discord manually removed."
-            sudo rm -rf /opt/Discord
-            exit 1
-        fi
+    if grep -qi "arch" /etc/os-release; then
+        echo "Detected Arch-based system."
+        sudo pacman -Rns --noconfirm discord 2>/dev/null || true
+        sudo rm -rf /opt/Discord
+    elif grep -qiE "debian|ubuntu" /etc/os-release; then
+        echo "Detected Debian-based system."
+        sudo apt remove --purge -y discord 2>/dev/null || true
+        sudo rm -rf /opt/Discord
     else
-        echo "Uninstallation canceled."
-        exit 0
+        echo "Unsupported system. Discord manually removed."
+        sudo rm -rf /opt/Discord
+        exit 1
     fi
 }
 
